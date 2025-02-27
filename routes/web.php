@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\SearchslotsController;
+use App\Http\Controllers\SlotsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +17,7 @@ use App\Http\Controllers\SearchslotsController;
 */
 
 Route::get('/', function () {
-    return view('layouts.layout');
-});
-Route::get('/', function () {
-    return view('layouts.layout');
+    return view('home');
 });
 
 
@@ -36,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('searchslots', [SearchslotsController::class, 'searchslotsview'])->name('searchslots');
-Route::post('searchslots', [SearchslotsController::class, 'searchslotsview']);
+Route::get('/search', [SlotsController::class, 'index'])->name('slots.view');
+Route::post('/book-parking', [SlotsController::class, 'book'])->name('book.parking');
+// Route::post('search', [SlotsController::class, 'searchslotsview']);
 require __DIR__.'/auth.php';

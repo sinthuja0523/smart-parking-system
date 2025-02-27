@@ -20,7 +20,7 @@ class HomeController extends Controller
             }
             else if ($usertype == 'admin')
             {
-                return view ('admin.admin');
+                return view ('admin.layout');
             }
             else if ($usertype == 'vendor')
             {
