@@ -15,10 +15,9 @@ class SlotsController extends Controller
         $location = $request->query('location');
         $date = $request->query('date');
         $time = $request->query('time');
+        $slots = \DB::table('slots')->get();
 
-
-
-        return view('search');
+        return view('search',compact('slots'));
     }
     public function book(Request $request)
 {

@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('parkingslots', function (Blueprint $table) {
+        Schema::create('slots', function (Blueprint $table) {
             $table->id();
-            $table->string('slot_name');
-            $table->string('location');
-            $table->date('date');
-            $table->time('time');
-            $table->enum('status', ['available', 'booked', 'processing']);
+            $table-> unsignedBigInteger('user_id')->nullable();
+            $table->enum('status', ['booked', 'to_arrive', 'parked', 'open', 'available', 'not_available'])->default('open');
+            $table->string('name');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('parkingslots');
+        Schema::dropIfExists('slots');
     }
 };
