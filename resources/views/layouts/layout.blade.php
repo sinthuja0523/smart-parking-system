@@ -34,6 +34,7 @@
             box-sizing: border-box !important
         }
     </style>
+    @yield('styles')
 </head>
 
 <body>

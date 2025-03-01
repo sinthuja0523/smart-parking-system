@@ -1,0 +1,100 @@
+.container.parking_container {
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    margin-bottom: 100px;
+
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.legend {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: ;
+}
+
+.red {
+    background-color: red;
+}
+
+.slots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+}
+
+.slot {
+    height: 65px;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.open {
+    background-color: #ffffff;
+    border: 1px solid rgb(112, 112, 112);
+}
+
+.pending {
+    background-color: rgb(255, 123, 0);
+    border: 2px solid rgb(221, 107, 0);
+    cursor: not-allowed;
+}
+
+.booked {
+    background-color: #ff6464;
+    border: 1px solid rgb(112, 112, 112);
+    cursor: not-allowed;
+}
+
+.selected {
+    background-color: #1eac0b;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: blue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}

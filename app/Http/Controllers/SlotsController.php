@@ -18,7 +18,7 @@ class SlotsController extends Controller
 
 
 
-        return view('details');
+        return view('search');
     }
     public function book(Request $request)
 {
