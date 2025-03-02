@@ -24,11 +24,13 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ url('') }}/assets/css/style.css" rel="stylesheet" />
+    
     <!-- responsive style -->
     <link href="{{ url('') }}/assets/css/responsive.css" rel="stylesheet" />
 
     <style>
-        html,body{
+        html,
+        body {
             padding: 0 !important;
             margin: 0 !important;
             box-sizing: border-box !important

@@ -925,5 +925,30 @@ a:focus {
   color: #ffffff;
 }
 
-/* end footer section*/
-/*# sourceMappingURL=style.css.map */
+/* HEADER START */
+.ctm_entry_btn{
+
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    margin-left: 30px;
+}
+a.ctm_entry_btn_anchor{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #212121;
+    padding: 0;
+    margin: 0;
+    font-weight: 700 !important;
+}
+.ctm_entry_btn:hover{
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+/* HEADER END */
+
